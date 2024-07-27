@@ -233,7 +233,7 @@ export default function DashProfile() {
           disabled={loading || imageFileUploading}
         >
           {loading ? 'Loading...' : 'Update'}
-        </Button>
+        </Button>  
         {currentUser.isAdmin && (
           <Link to={'/create-post'}>
             <Button
