@@ -1,71 +1,3 @@
-// import { TextInput } from 'flowbite-react'
-// import React, { useEffect, useState } from 'react'
-// import { useLocation } from 'react-router-dom';
-// export default function Search() {
-//     const [sidebarData, setSidebarData] = useState({
-//         searchTerm: "",
-//         sort: "desc",
-//         category: "uncategorized "
-//     });
-//     const [posts, setPosts] = useState({});
-//     const [loading, setLoading] = useState(false);
-//     const [showMore, setShowMore] = useState(false);
-//     const location = useLocation();
-//     console.log(sidebarData);
-    
-//     useEffect(() => {
-//         const urlParams = new URLSearchParams(location.search);
-//         const searchTermFromUrl = urlParams.get('searchTerm');
-//         const sortFromUrl = urlParams.get('sort');
-//         const categoryFromUrl = urlParams.get('category');
-//         if (searchTermFromUrl || sortFromUrl || categoryFromUrl) {
-//           setSidebarData({
-//             ...sidebarData,
-//             searchTerm: searchTermFromUrl,
-//             sort: sortFromUrl,
-//             category: categoryFromUrl,
-//           });
-//         }
-
-//         const fetchPosts = async () => {
-//             setLoading(true);
-//             const searchQuery = urlParams.toString();
-//              const res = await fetch(`/api/post/getposts?${searchQuery}`);
-//              if (!res.ok) {
-//                 setLoading(false);
-//                 return;
-//              }
-//              if (res.ok) {
-//                 const data = await res.json();
-//                 setPosts(data.posts);
-//                 setLoading(false);
-//                 if (data.posts.length === 9) {
-//                     setShowMore(true);
-//                 } else {
-//                     setShowMore(false);
-//                 }
-//              }
-//         }
-//         fetchPosts();
-//     }, [location.search])
-//   return (
-//     <div>
-//         <div className="div">
-//             <form>
-//                 <div>'
-//                     <label>Search Term:</label>
-//                     <TextInput
-//                     placeholder='Search...'
-//                     id='searchTerm'
-//                     type='text'
-//                     />
-//                 </div>
-//             </form>
-//         </div>
-//     </div>
-//   )
-// }
-
 import { Button, Select, TextInput } from 'flowbite-react';
 import { useEffect, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
@@ -199,9 +131,9 @@ export default function Search() {
               id='category'
             >
               <option value='uncategorized'>Uncategorized</option>
-              <option value='reactjs'>React.js</option>
-              <option value='nextjs'>Next.js</option>
-              <option value='javascript'>JavaScript</option>
+              <option value='reactjs'>Crypto</option>
+              <option value='nextjs'>Forex</option>
+              <option value='javascript'>Trends</option>
             </Select>
           </div>
           <Button type='submit' outline gradientDuoTone='purpleToPink'>
