@@ -9,7 +9,6 @@ import cookieParser from 'cookie-parser';
 import path from 'path';
 
 
-const port = 3000
 
 dotenv.config();  
  
@@ -27,7 +26,7 @@ app.use(express.json());
 app.use(cookieParser());
 
 app.listen(3000, () => {
-    console.log('listening on port ' + port)
+    console.log('listening on port 3000!');
 });
 
 app.use('/api/user', userRoutes);  
@@ -35,7 +34,7 @@ app.use('/api/auth', authRoutes);
 app.use('/api/post', postRoute);  
 app.use('/api/comment', commentRoutes); 
 
-app.use(express.static(path.join(__dirname, '/client/dist'))); 
+app.use(express.static(path.join(__dirname, '/client/dist')));
 
 app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, 'client', 'dist', 'index.html'));
