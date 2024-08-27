@@ -20,7 +20,7 @@ export default function Home() {
         <h1 className='text-3xl font-bold lg:text-6xl'>Welcome to my Blog!</h1>
         <p>This is a community of leaners...</p>
         <p className='text-gray-500 text-xs sm:text-sm'>
-          Here you'll find a variety of articles and tutorials on topics such as crypto-currency, investing in  stock's, and finacial literacy.
+          Here you'll find a variety of articles and tutorials on topics such as crypto-currency, investing in stock's, and finacial literacy.
         </p>
         <Link
           to='/search'
